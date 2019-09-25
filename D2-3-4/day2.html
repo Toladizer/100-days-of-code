@@ -1,0 +1,123 @@
+<!-- DECLARING DE HTML DOCTYPE "HTML 5 TYPE" -->
+<!DOCTYPE html>
+<html>
+    <!-- METADATA ELEMENTS -->
+    <head>
+        <title>Dia 2 - 100 Days Of Code</title>
+
+        <!-- IMPORT A GOOGLE FONT -->
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
+        <!-- CSS STYLE TAG -->
+        <style>
+            h2 {
+                color: blue;
+                /* IF LOBSTER FONT IS NOT AVAILABLE IT WILL CHANGE TO MONOSPACE */
+                font-family: Lobster, monospace 
+            }
+
+            /* CSS CLASS DECLARATION */
+            .red-text {
+                color: red;
+            }
+
+            p {
+                font-size: 16px;
+                font-family: monospace;
+            }
+
+            /* RECISE IMAGE */
+            .smaller-image {
+                width: 100px;
+            }
+
+            /* BORDER */
+            .thick-green-border {
+                border-color: #0F0;
+                border-width: 10px;
+                border-style: solid;
+                border-radius: 10px;
+            }
+
+            /* BACKGROUND COLOR */
+            .silver-background {
+                background-color: silver;
+            }
+
+            /* CSS ID DECLARATION */
+            #cat-photo-form {
+                background-color: green;
+            }
+
+            /* ATRIBITTE SELECTOR */
+            [type='checkbox'] {
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+        </style>
+    </head>
+    <!-- PAGE CONTENT -->
+    <body>
+        <h1>Basic Html and Html5</h1>
+
+        <!-- INLINE CSS -->
+        <h2 style="color: #F00;">CatPhotoApp</h2>
+        <main>
+            <p>Click here to view more <a href="#">cat photos</a>.</p>
+            
+            <img src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back.">
+
+            <!-- Image with a dead link -->
+            <a href="#">
+                <img class="smaller-image thick-green-border" src="https://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back." >
+            </a>
+
+            <!-- NEW DIVISION -->
+            <div class="silver-background">
+                <!-- PARAGRAPH -->
+                <p>List's</p>
+                <!-- Unordered list -->
+                <ul>
+                    <li>milk</li>
+                    <li>cheese</li>
+                    <li>Mouse</li>
+                </ul>
+        
+                <!-- Ordered list  -->
+                <ol>
+                    <li>milk</li>
+                    <li>cheese</li>
+                    <li>Mouse</li>
+                </ol>
+            </div>
+
+            <!-- INPUT TYPE TEXT -->
+            <input type="text" placeholder="cat photo URL">
+
+            <!-- FORM WITH ACTION -->
+            <form action="/submit-cat-photo" id="cat-photo-form">
+                <!-- REQUIRED ATRIBUTE TO OBRIGATE USER TO TEXT SOMETHING UNTIL SUBMIT -->
+                <input type="text" placeholder="cat photo URL" required>
+               
+                <!-- RADIO BUTTON GROUP TO SELECT A ESPECIF ELEMENT BETWEEN A GROUP -->
+                <label for="indoor">
+                    <input id="indoor" type="radio" name="indoor-outdoor" checked> indoor
+                </label>
+                <label for="outdoor">
+                    <input id="outdoor" type="radio" name="indoor-outdoor"> outdoor
+                </label>
+
+                <!-- checkbox GROUP TO SELECT A MORE THAN ONE ELEMENT IN A GROUP -->
+                <label for="happy"><input id="happy" type="checkbox" name="personality" checked> happy</label>
+                <label for="loving"><input id="loving" type="checkbox" name="personality"> loving</label>
+                <label for="growing"><input id="growing" type="checkbox" name="personality"> growing</label>
+
+                <!-- BUTTON TO SUBMIT TEXT TO A SERVER -->
+                <button type="submit">Submit</button>
+            </form>
+            
+            <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+            <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+        </main>
+    </body>
+</html>
