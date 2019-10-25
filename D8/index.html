@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Applied Visual Design</title>
+		<style>
+			h4 {
+				/*	TEXT-ALIGNMENT */
+				text-align: center;
+				/*	HEIGHT-ELEMENT */
+				/*	height: 25px;	*/
+				/*	BACKGROUND WITH OPACITY	*/
+				background-color: rgba(45, 45, 45, 0.1);
+				padding: 10px;
+				font-size: 27px;
+				font-weight: 500;
+				/* TEXT-TRANFORMATION TO UPPERCASE */
+				text-transform: uppercase;
+
+				/* RELATIVE POSITIONS */
+				position: relative;
+				top: 15px;
+			}
+			p {
+				text-align: justify;
+				line-height: 25px;
+			}
+			.links {
+				margin-right: 20px;
+				/* OPACITY */
+				opacity: 0.7;
+			}
+			#thumbnail {
+				/* BOX SHADOW */
+				box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+			}
+			.fullCard {
+				/* Width Element */
+				width: 245px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				margin: 10px 5px;
+				padding: 4px;
+			}
+			.cardContent {
+				padding: 10px;
+				position: relative;
+			}
+			.cardLinks {
+				/* ABSOLUTE POSITIONS */
+				position: absolute;
+				top: 92%;
+			}
+
+			/* HOVER STATE */
+			a:hover {
+				color: blue;
+			}
+		</style>
+	</head>
+
+	<body> 
+		  <div class="fullCard" id="thumbnail">
+			<div class="cardContent">
+			  <div class="cardText">
+				<!-- S TAG(TEXT SUB) -->
+				<h4><s>Google</s> Alphabet</h4>
+				<!-- HR(HORIZONTAL LINE) -->
+				<hr>
+				<!-- /*	P TAG - EM TAG(ITALIC) - U TAG(UNDERLINE) - STRONG TAG(BOLD) */ -->
+				<p>
+					<em>
+						Google was founded by Larry Page and Sergey Brin while they were <u>Ph.D. students</u> at <strong>Stanford University</strong>.
+					</em>
+				</p>
+			  </div>
+			  <div class="cardLinks">
+				<a href="https://en.wikipedia.org/wiki/Larry_Page" target="_blank" class="links">Larry Page</a>
+				<a href="https://en.wikipedia.org/wiki/Sergey_Brin" target="_blank" class="links">Sergey Brin</a>
+			  </div>
+			</div>
+		  </div>
+	</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transforming element</title>
+        <style>
+            #rect {
+              width: 70%;
+              height: 100px;
+              margin:  50px auto;
+              background: linear-gradient(
+                53deg,
+                #ccfffc,
+                #ffcccf
+              );
+            }
+          
+            #rect:hover {
+              transform: scale(1.1);
+              /*  Skew element on hover event */
+              transform: skewX(24deg);
+              transform: skewY(-10deg);
+            }
+
+            #ball {
+                width: 100px;
+              height: 100px;
+              margin:  50px auto;
+              background: linear-gradient(
+                53deg,
+                #ccfffc,
+                #ffcccf
+              );
+              border-radius: 50%;
+            }
+
+            #ball:hover {
+                /*  Scale element on hover event */
+                transform: scale(1.1);
+            }
+
+        .moon {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: transparent !important;
+            border-radius: 50%;
+            box-shadow: 25px 10px 0px 0px blue;
+        }
+
+        .heart {
+            position: absolute;
+            margin: auto;
+            top: 250px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: pink;
+            height: 50px;
+            width: 50px;
+            transform: rotate(-45deg);
+        }
+        .heart::after {
+            background-color: pink;
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 0px;
+            left: 25px;
+        }
+        .heart::before {
+            content: "";
+            background-color: pink;
+            border-radius: 50%;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: -25px;
+            left: 0px; 
+        }
+
+        .heart:hover {
+            animation-name: rainbow;
+            animation-duration: 1.5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+        }  
+
+        @keyframes rainbow {
+            0% { 
+                transform: rotate(-45deg) scale(1.1);
+            }
+            50% { 
+                transform: rotate(-45deg) scale(1.1);
+            }
+            100% { 
+                transform: rotate(-45deg) scale(1.1);
+            }
+        }
+
+        .anime {
+            height: 40px;
+            width: 70%;
+            background: black;
+            margin: 50px auto;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        #recta {
+            animation-name: rainbow1;
+            animation-duration: 3s; 
+        }
+
+        @keyframes rainbow1 {
+            0% {
+            background-color: blue;
+            left: 0px;
+            }
+            50% {
+            background-color: green;
+            left: 25px;
+            }
+            100% {
+            background-color: yellow;
+            left: -25px;
+            }
+        }
+
+        #ball_pull {
+    width: 100px;
+    height: 100px;
+    margin: 50px auto;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes bounce{
+    0% {
+      top: 0px;
+    }
+    50% {
+      top: 249px;
+      width: 130px;
+      height: 70px;
+    }
+    100% {
+      top: 0px;
+    }
+  }
+          </style>
+    </head>
+
+    <body> 
+          <div id="rect"></div>
+          <div id="ball"></div>
+          <div id="ball_pull"></div>
+          <div class="moon"></div> 
+          <div class="heart"></div>
+          <br><br><br><br><br><br><br>
+        <div class="anime" id="recta"></div>
+       
+    </body>
+</html>
